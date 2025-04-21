@@ -1,63 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Core 2: Interaction Homepage</title>
-	<link rel="icon" type="image/x-icon" href="favicon.ico">
-	<link rel="stylesheet" href="./assets/style.css">
-	<style>
-		body {
-			background-color: #ffffff;
-			font-family: 'Inter', sans-serif;
-			color: #333;
-			margin: 0;
-			padding: 0;
-			display: flex;
-			flex-direction: column;
-		}
-		header {
-			position: absolute;
-			bottom: 0;
-			left: 50%;
-			transform: translateX(-50%);
-			text-align: center;
-			width: 100%;
-			padding: 20px 0;
-		}
-		h1 {
-			font-size: 36px;
-			color: #2499ff;
-			margin: 0;
-		}
-		main {
-			display: flex;
-			width: 100%;
-			max-width: 1200px;
-			padding: 20px;
-		}
-		nav {
-			width: 200px;
-			display: flex;
-			flex-direction: column;
-			gap: 20px;
-		}
-		nav a {
-			text-decoration: none;
-			color: #2499ff;
-			font-size: 18px;
-		}
-	</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Core 2: Interaction</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Helvetica+Neue+World:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<header>
-		<h1>Core 2: Interaction Homepage</h1>
-	</header>
-	<main>
-		<nav>
-			<a href="studio-projects.html">Studio Projects</a>
-			<a href="studio-workshops.html">Studio Workshops</a>
-		</nav>
-	</main>
+  <h1>Core 2: Interaction</h1>
+  <h2>Sarah Chang's Class Catalog</h2>
+
+  <div class="box" onclick="toggleDropdown('p1')">P1: Text on Web</div>
+  <div id="p1" class="dropdown">
+    <a href="#">P1.1 Concept Version 1</a>
+    <a href="#">P1.1 Concept Version 2</a>
+    <a href="#">P1.2 Design</a>
+    <a href="#">P1.4 Final Website</a>
+  </div>
+
+  <div class="box" onclick="toggleDropdown('p2')">P2: Input & Output</div>
+  <div id="p2" class="dropdown">
+    <a href="#">P2.1 Concept Version 1</a>
+    <a href="#">P2.1 Concept Version 2</a>
+    <a href="#">P2.2 Design</a>
+    <a href="#">P2.4 Final Website</a>
+  </div>
+
+  <div class="box">P3: Platform & Community</div>
+
+  <div class="box" onclick="toggleDropdown('studio')">Studio Workshops</div>
+  <div id="studio" class="dropdown">
+    <a href="#">Story Style</a>
+    <a href="#">Light Switch</a>
+    <a href="#">Penny Presser</a>
+    <a href="#">Collection</a>
+  </div>
+
+  <script>
+    function toggleDropdown(id) {
+      const dropdown = document.getElementById(id);
+      dropdown.style.display = dropdown.style.display === 'flex' ? 'none' : 'flex';
+    }
+  </script>
 </body>
 </html>
+
